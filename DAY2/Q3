@@ -7,3 +7,26 @@ assign even = ~num[0];
 assign odd  = num[0];
 endmodule
 
+
+module evenodd_checker_tb;
+reg [3:0] num;
+wire even, odd;
+evenodd_checker uut (
+    .num(num),
+    .even(even),
+    .odd(odd)
+);
+initial begin
+    $dumpfile("evenodd_checker.vcd");
+    $dumpvars(0, evenodd_checker_tb);
+    $monitor("t=%0t | num=%d | even=%b | odd=%b", $time, num, even, odd);
+    num = 4'd0; #10;
+    num = 4'd5; #10;
+    num = 4'd10; #10;
+    num = 4'd7; #10;
+    num = 4'd12; #10;
+    $finish;
+end
+endmodule
+
+
