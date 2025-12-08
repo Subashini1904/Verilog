@@ -1,0 +1,7 @@
+module unsizednum(
+input a,
+input b,
+output y
+);
+assign y = (a&b)|'b1 |'h0;
+endmodule
