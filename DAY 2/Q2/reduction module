@@ -1,0 +1,10 @@
+module reduction (
+input  [3:0] a,
+output and_out,
+output or_out,
+output xor_out
+);
+assign and_out = &a;
+assign or_out  = |a;
+assign xor_out = ^a;
+endmodule
