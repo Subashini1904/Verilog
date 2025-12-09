@@ -1,0 +1,13 @@
+module relational_op(
+input  [3:0] a,
+input  [3:0] b,
+output gt,   
+output lt,   
+output ge,   
+output le    
+);
+assign gt = (a > b);
+assign lt = (a < b);
+assign ge = (a >= b);
+assign le = (a <= b);
+endmodule
