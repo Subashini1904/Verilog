@@ -11,6 +11,8 @@ sipo_dff uut (
 );
 always #5 clk = ~clk;
 initial begin
+    $dumpfile("sipo_dff.vcd");     
+    $dumpvars(0, sipo_dff_tb);  
     clk = 0;
     rst = 1;
     serial_in = 0;
@@ -25,4 +27,3 @@ initial begin
     $monitor("Time=%0t SI=%b Q3Q2Q1Q0=%b%b%b%b", $time, serial_in, q3, q2, q1, q0);
 end
 endmodule
-
