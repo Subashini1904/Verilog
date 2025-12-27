@@ -46,3 +46,14 @@ always @(posedge clk or posedge rst) begin
         state <= next_state;
 end
 endmodule
+
+
+//OUTPUT//
+T=0 x=0 z=0
+T=20 x=1 z=0
+T=30 x=0 z=0
+T=40 x=1 z=0
+T=45 x=1 z=1
+T=55 x=1 z=0
+T=60 x=0 z=0
+T=70 x=1 z=0
